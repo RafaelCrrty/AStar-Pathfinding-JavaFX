@@ -1,0 +1,42 @@
+/* Estilo para paneles */
+.panel {
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.14), 10, 0, 0, 1);
+}
+
+.textl {
+    -fx-text-fill: #555;
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 2, 0, 0, 1);
+}
+
+.button2{
+    -fx-background-color:  #019d01; /* Fondo verde */
+    -fx-text-fill: white; /* Texto en color blanco */
+    -fx-font-size: 14px; /* Tamaño de fuente mediano para los botones */
+    -fx-padding: 5px 10px; /* Relleno en el lado superior e inferior del botón */
+
+}
+
+/* Estilo para los botones al pasar el mouse */
+.button2:hover {
+    -fx-background-color: #3baa42; /* Fondo naranja más claro */
+}
+
+/* Estilo para los botones */
+.button1 {
+    -fx-background-color: #fda144; /* Fondo naranja */
+    -fx-text-fill: white; /* Texto en color blanco */
+    -fx-font-size: 14px; /* Tamaño de fuente mediano para los botones */
+    -fx-padding: 5px 10px; /* Relleno en el lado superior e inferior del botón */
+
+}
+/* Estilo para los botones al pasar el mouse */
+.button1:hover {
+    -fx-background-color:rgba(253, 161, 68, 0.8); /* Naranja más opaco */
+}

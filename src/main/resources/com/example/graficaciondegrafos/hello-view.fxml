@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1533.0" stylesheets="@StylesCss/New_Archorpane.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graficaciondegrafos.HelloController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="358.5999999999999" layoutY="10.0" maxHeight="803.0" maxWidth="1467.0" minHeight="629.0" minWidth="1098.0" onMouseClicked="#OnMouseClicked" prefHeight="803.0" prefWidth="1145.0" styleClass="panel" stylesheets="@StylesCss/New_Archorpane.css" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0" />
+      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="803.0" prefWidth="331.0" style="-fx-background-color: gray;" stylesheets="@StylesCss/StyleTableView.css">
+         <children>
+            <TableView fx:id="tableview_lisAbierta" layoutX="15.0" layoutY="271.0" prefHeight="250.0" prefWidth="302.0" style="-fx-background-color: white;">
+              <columns>
+                <TableColumn fx:id="tbl_n_A" prefWidth="75.0" text="N" />
+                <TableColumn fx:id="tbl_p_A" prefWidth="75.0" text="PADRE" />
+                  <TableColumn fx:id="tbl_fn_A" prefWidth="75.0" text="FN" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TableView fx:id="tableview_lisCerrada" layoutX="15.0" layoutY="544.0" prefHeight="250.0" prefWidth="302.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="tbl_n_C" prefWidth="75.0" text="N" />
+                  <TableColumn fx:id="tbl_p_C" prefWidth="75.0" text="PADRE" />
+                  <TableColumn fx:id="tbl_fn_C" prefWidth="75.0" text="FN" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <AnchorPane layoutX="14.199999999999932" layoutY="111.00000000000006" prefHeight="139.0" prefWidth="302.0" styleClass="panel">
+               <children>
+                  <Label layoutX="14.0" layoutY="47.0" text="Inicio" />
+                  <ComboBox fx:id="cmb_boxIncio" layoutX="52.0" layoutY="43.0" prefHeight="26.0" prefWidth="82.0" />
+                  <Label layoutX="164.0" layoutY="48.0" text="Final" />
+                  <ComboBox fx:id="cmb_boxFin" layoutX="197.0" layoutY="42.0" prefHeight="26.0" prefWidth="82.0" />
+                  <Button fx:id="btn_calcular" layoutX="197.0" layoutY="85.0" mnemonicParsing="false" onAction="#OnlickActionCalcular" prefHeight="30.0" prefWidth="82.0" styleClass="button2" text="Calcular" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Encontrar la Mejor Ruta" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" layoutX="17.0" layoutY="24.0" prefHeight="74.0" prefWidth="302.0">
+               <children>
+                  <Button fx:id="circulo" mnemonicParsing="false" onAction="#onclick" prefHeight="86.0" prefWidth="82.0" styleClass="panel">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/circulo.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="0.36" contrast="-0.3" hue="-0.1" saturation="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="linea" mnemonicParsing="false" onAction="#onclick" styleClass="panel">
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/linearecta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="limpiar" mnemonicParsing="false" onAction="#onclick" prefHeight="72.0" prefWidth="85.0" styleClass="panel">
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/borrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="15.0" layoutY="253.0" text="LISTA ABIERTA" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="526.0" text="LISTA CERRADA" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
